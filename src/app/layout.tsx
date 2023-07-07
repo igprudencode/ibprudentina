@@ -1,6 +1,10 @@
-import { NavBar } from "@/components/navbar";
 import { Inter } from "next/font/google";
+
 import StyledComponentsRegistry from "@/lib/registry";
+
+import { NavBar } from "@/components/navbar";
+import Footer from "@/components/footer";
+
 import { GlobalStyle } from "@/styles/global";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +27,8 @@ export default function RootLayout({
 
           <NavBar />
           {children}
+
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
