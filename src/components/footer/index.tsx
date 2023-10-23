@@ -7,9 +7,9 @@ export default function Footer() {
     <Container>
       <InformationContainer>
         <h3>Igreja Batista Prudentina</h3>
-        {InformationData.map((item) => {
+        {InformationData.map((item, id) => {
           return (
-            <InformationItem>
+            <InformationItem key={id}>
               {item.icon}
               <a href={item.href}>{item.text}</a>
             </InformationItem>
@@ -17,9 +17,9 @@ export default function Footer() {
         })}
       </InformationContainer>
       <LinksContainer>
-        {LinksData.map((item) => {
+        {LinksData.map((item, id) => {
           return(
-            <a href={item.href}>{item.text}</a>
+            <a key={id} href={item.href}>{item.text}</a>
           )
         })}
       </LinksContainer>
