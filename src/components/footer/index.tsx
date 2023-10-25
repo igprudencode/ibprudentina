@@ -1,10 +1,11 @@
 "use client"
-
 import { useCallback, useMemo, useState } from "react";
 
 import {
   GoogleMap,
+  Marker,
   useJsApiLoader,
+
 } from "@react-google-maps/api";
 
 import { Container, ContentContainer, InformationContainer, InformationItem, LinksContainer, MapContainer } from "./styles";
@@ -12,6 +13,7 @@ import { Container, ContentContainer, InformationContainer, InformationItem, Lin
 import { InformationData, LinksData } from "./data";
 
 export default function Footer() {
+  const MapsLink = "https://www.google.com.br/maps/place/Igreja+Batista+Prudentina/@-22.1167406,-51.3908913,19.72z/data=!4m6!3m5!1s0x9493f4359d66cecf:0x8e56aaa678f31158!8m2!3d-22.1167267!4d-51.3906263!16s%2Fg%2F1ptwl8d6k?entry=ttu"
   const [map, setMap] = useState();
 
   const { isLoaded } = useJsApiLoader({
@@ -66,9 +68,13 @@ export default function Footer() {
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={coordinates}
-              zoom={8}
+              zoom={15}
               onLoad={onLoad}
-            />
+            >
+              <Marker position={coordinates} onClick={() => {
+                window.location.href = MapsLink
+              }} />
+            </GoogleMap>
           ) : <></>}
           <p>&copy; {new Date().getFullYear()} Igreja Batista Prudentina | All Rights Reserved</p>
         </MapContainer>
