@@ -1,9 +1,13 @@
-import { NavBar } from "@/components/navbar";
 import { Inter } from "next/font/google";
+
 import StyledComponentsRegistry from "@/lib/registry";
+
+import { NavBar } from "@/components/navbar";
+import Footer from "@/components/footer";
+
 import { GlobalStyle } from "@/styles/global";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: "500" });
 
 export const metadata = {
   title: "Igreja Batista Prudentina",
@@ -23,6 +27,7 @@ export default function RootLayout({
 
           <NavBar />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>

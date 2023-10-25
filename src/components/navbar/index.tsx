@@ -9,7 +9,7 @@ import {
   LogoContainer,
   MediaContainer,
   SpotifyButton,
-  YoutubeButton,
+  YouTubeButton,
   InstagramButton,
 } from "./styles";
 import Image from "next/image";
@@ -57,14 +57,14 @@ export function NavBar() {
             <BsSpotify />
           </Link>
         </SpotifyButton>
-        <YoutubeButton>
+        <YouTubeButton>
           <Link
             href="https://www.youtube.com/IgrejaBatistaPrudentina"
             target="_blank"
           >
             <BsYoutube />
           </Link>
-        </YoutubeButton>
+        </YouTubeButton>
       </MediaContainer>
     </Container>
   );
