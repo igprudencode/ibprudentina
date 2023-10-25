@@ -94,7 +94,7 @@ export const FacebookButton = styled.button`
   }
 `;
 
-export const YoutubeButton = styled.button`
+export const YouTubeButton = styled.button`
   :hover {
     transition: 0.2s;
 

@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 
 import { GlobalStyle } from "@/styles/global";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: "500" });
 
 export const metadata = {
   title: "Igreja Batista Prudentina",
