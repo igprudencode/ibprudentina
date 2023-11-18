@@ -36,7 +36,7 @@ export const InformationData: InformationDataProps[] = [
 
 export const LinksData: LinksDataProps[] = [
     {
-        text: 'Sobre Nós',
+        text: 'Sobre nos',
         href: '',
     },
     {
